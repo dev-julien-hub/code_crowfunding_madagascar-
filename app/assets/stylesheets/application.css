@@ -1,0 +1,32 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import './bootstrap_custom.scss';
+@import '@fortawesome/fontawesome-free';
+
+.pointer{
+	cursor: pointer;
+}
+
+.reponse-mes-val { margin-bottom: 1.5em; padding: 1em; border: 2px solid; }
+.alert-mes-val { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; position:absolute;z-index:50;margin-left: -35px;text-align:right;padding-left:1.2em;}
+.notice-mes-val { background: #fff6bf; color: #514721; border-color: #ffd324; position:absolute;z-index:50;margin-left: -35px;text-align: right;}
+.success-mes-val { background: #e6efc2; color: #264409; border-color: #c6d880; }
+.info-mes-val { background: #d5edf8; color: #205791; border-color: #92cae4; }
+
+.main{
+	margin-top:1.5%;
+}

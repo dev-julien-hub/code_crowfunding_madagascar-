@@ -1,0 +1,141 @@
+<style type="text/css">
+    #topNav{display:none;}
+</style>
+<div class = "_h-100">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <%= link_to image_tag("logo_white.png", border: 0) %>
+                    <h3>Welcome on valintanana</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        <a class="login-button" name="" href="/users/sign_in">Login</a><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Society</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                                <img id="uploadPreview" class="upload-files"/> 
+                                <h3 class="register-heading">Apply as a user</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <%= f.text_field :name, class:"form-control _input-field", placeholder: "Nom" %>
+                                        </div>
+                                        <div class="form-group">
+                                            <%= f.text_field :first_name, class:"form-control _input-field", placeholder: "Prénom" %>
+                                        </div>
+                                        <div class="form-group">
+                                            <br />
+                                            <%= f.password_field :password, class:"form-control _input-field", autocomplete: "new-password", placeholder:"Mot de passe" %>
+                                        </div>
+                                        <div class="form-group">
+                                            <%= f.password_field :password_confirmation, class:"form-control _input-field",autocomplete: "new-password",placeholder:"Confirmation" %>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <span class="input-nile">
+                                                  <%= f.radio_button :sexe,"Homme",class: 'input__field input__field-nile radio'%>
+                                                  <label class="radio-label">Homme</label>
+                                                </span>
+                                                <span class="input-nile">
+                                                  <%= f.radio_button :sexe,"Femme",class: 'input__field input__field-nile radio'%>
+                                                  <label class="radio-label">Femme </label>
+                                                </span>
+                                            </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <%= f.email_field :email, class:"form-control _input-field", autofocus: true, autocomplete: "email", placeholder:"email" %>
+                                        </div>
+                                        <div class="form-group">
+                                            <%= f.text_field :tel, class:"form-control _input-field",maxlength:"10", minlength:"10", autocomplete: "tel", placeholder:"phone" %>
+                                        </div>
+                                        <div class="form-group" >
+                                            <% @pays = [ 'select your region','Cell', 'Work', 'Office', 'Home', 'Other' ] %>
+                                            <%= f.select :pays, options_for_select(@pays), 
+                                              {}, { class: "form form-group form-control _input-field" } %>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control _input-field">
+                                                <option class="hidden"  selected disabled>region</option>
+                                                <option>What is your Birthdate?</option>
+                                                <option>What is Your old Phone Number</option>
+                                                <option>What is your Pet Name?</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="btn btn-default btn-change-avatar form-control _input-field pointer">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                Photo de profile
+                                                <span style="display:none;" onchange="PreviewImage();" >
+                                                  <%= f.file_field :avatar, id:"uploadImage"%>
+                                                </span>
+                                              </label>
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                                <% end %>
+                            </div>
+
+
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Apply as a Society</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                                <option>What is your Birthdate?</option>
+                                                <option>What is Your old Phone Number</option>
+                                                <option>What is your Pet Name?</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+<script type="text/javascript">
+function PreviewImage() { var oFReader = new FileReader(); oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]); oFReader.onload = function (oFREvent) { document.getElementById("uploadPreview").src = oFREvent.target.result; }; };
+</script>

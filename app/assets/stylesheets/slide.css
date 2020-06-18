@@ -1,0 +1,264 @@
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30% !important;
+}
+.pad1{
+  padding:0 1% 1% 1%;
+}
+.marg1{
+  width: 100%;
+  height: 42em;
+  background-image:url('/test.jpg'),linear-gradient(to bottom, rgb(179, 147, 96), rgba(0,0,255,0.5))
+}
+
+
+.card__slide:nth-child(2) .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/mountain-back-crop2.png");
+    background-size: 101% auto;
+    background-position: center 85%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+    -webkit-transition: opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+    transition: opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+    transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
+    transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+}
+.card__slide.active {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+}
+.card__slide:nth-child(1).active .image {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transition: opacity 300ms 1000ms linear, -webkit-transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 1000ms linear, -webkit-transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear;
+    transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear, -webkit-transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card__slide.active .number {
+    opacity: 1;
+    -webkit-transform: translatex(0rem);
+    transform: translatex(0rem);
+    -webkit-transition: opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 900ms linear;
+    transition: transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card__slide .number {
+    opacity: 0;
+    -webkit-transform: translatex(-5rem);
+    transform: translatex(-5rem);
+    -webkit-transition: opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms linear;
+    transition: transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.number {
+    color: #ffffff;
+    z-index: 1;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    position: absolute;
+    left: 5%;
+    top: calc(50% + 6rem);
+}
+* {
+    -webkit-backface-visibility: hidden;
+}
+.card__slide.active .date {
+    opacity: 1;
+    -webkit-transform: translatex(0rem) rotate(-90deg);
+    transform: translatex(0rem) rotate(-90deg);
+    -webkit-transition: opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 900ms linear;
+    transition: transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 900ms linear, -webkit-transform 600ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card__slide .date {
+    opacity: 0;
+    -webkit-transform: translatex(-5rem) rotate(-90deg);
+    transform: translatex(-5rem) rotate(-90deg);
+    -webkit-transition: opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms linear;
+    transition: transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms linear, -webkit-transform 600ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.date {
+    color: #ffffff;
+    z-index: 1;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    position: absolute;
+    left: 95%;
+    width: 30%;
+    top: calc(83% - 0.5rem);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+* {
+    -webkit-backface-visibility: hidden;
+}
+.card__slide:nth-child(2) {
+    overflow: hidden;
+}
+.card__slide:nth-child(2n) {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+}
+.card__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0);
+    -webkit-transition: box-shadow 400ms 400ms linear;
+    transition: box-shadow 400ms 400ms linear;
+}
+.card__slide:nth-child(2) .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/mountain-back-crop2.png");
+    background-size: 101% auto;
+    background-position: center 85%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+    -webkit-transition: opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+    transition: opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+    transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
+    transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
+}
+.content {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 68%;
+    z-index: 2;
+}
+.content__slide.active {
+    pointer-events: auto;
+}
+.content__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.title {
+    color: #ffffff;
+    font-size: 5.5rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    margin: 0 0 3.6rem;
+}
+.title__line {
+    display: inline-block;
+    position: relative;
+}
+.content__slide.active .desc {
+    -webkit-transition-delay: 1800ms;
+    transition-delay: 1800ms;
+}
+.content__slide.active .title__inner, .content__slide.active .desc, .content__slide.active .button-wrap {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+}
+.title__inner, .desc, .button-wrap {
+    opacity: 0;
+    -webkit-transform: translatey(2.5rem);
+    transform: translatey(2.5rem);
+    position: relative;
+    -webkit-transition: opacity 300ms linear, -webkit-transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms linear, -webkit-transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms linear;
+    transition: transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms linear, -webkit-transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: 0s, 0s, 0s;
+}
+.desc {
+    font-size: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.84;
+    margin: 0 0 3.6rem;
+    color: #ffffff;
+}
+.content__slide.active .button-wrap {
+    -webkit-transition-delay: 2000ms;
+    transition-delay: 2000ms;
+}
+.content__slide:nth-child(2n) {
+    text-align: right;
+}
+.content__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.card {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 50rem;
+  height: 33rem;
+  background: #000000;
+}
+.button {
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 1.15rem 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    margin-top:2rem;
+    border-top: 0.15rem solid #304ffe;
+    border-bottom: 0.15rem solid #7b29ff;
+    box-shadow: 0 1rem 2rem rgba(123, 41, 255, 0.2);
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: -webkit-transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+button:hover {
+    -webkit-transform: translatey(-0.5rem);
+    transform: translatey(-0.5rem);
+}

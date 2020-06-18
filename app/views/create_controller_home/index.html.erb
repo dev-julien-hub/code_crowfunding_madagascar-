@@ -1,0 +1,222 @@
+
+ <div class="pad1">
+    <div class="marg1"></div>
+</div> 
+<div class="image"></div><span class="date"><%= Time.new().to_date%> <span class="date__time"><%= @time %></span></span>
+<div class="card">
+    <div class="card__slide "></div>
+    <div class="card__slide active">
+      <div class="back-image"></div>
+    </div>
+    <div class="content">
+      <div class="content__slide active">
+        <h2 class="title"><span class="title__line"> <span class="title__inner">Mesmerizing</span></span><span class="title__line"> <span class="title__inner">Depths</span></span></h2>
+        <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget <br> dolor. Mauris ac mattis lectus. Praesent facilisis <br> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
+        <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
+      </div>
+      <div class="content__slide">
+        <h2 class="title"> <span class="title__line"> <span class="title__inner">Breathtaking</span></span><span class="title__line"> <span class="title__inner">Heights</span></span></h2>
+        <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget  <br> dolor. Mauris ac mattis lectus. Praesent facilisis  <br> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
+        <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
+      </div>
+      <div class="content__ping content__ping--noanimation"></div>
+    </div>
+  </div>
+
+    <div class = "home-bacground">   
+        <div class="_projetUne">
+            <h2>Projet à la une</h2>
+        </div>
+        <div class="contains-projet">
+            <div class="arrow-l left-r"><i class="fa fa-arrow-left r arow-hover slideToggleLeft"></i> </div>
+                <div class="_padding">
+                    <div class="_projet-home">
+                        
+
+                      <% for i in 1...15 %>
+                          
+                        <div class="v-width ac-poney">
+                            <div class="title-project rotateInDownRight animate delay-5s">
+                                Titre du projets
+                            </div>
+                            <div class="projectPicture">
+                                <%= image_tag 'test.jpg', class:'item-projet' %>
+                            </div>
+                            <div class="project-builder">
+                                <div class="flex-user-builder">
+                                    <div class="user-contain-picture">
+                                        <%= image_tag 'test1.jpg', class:'user-contain-picture' %>
+                                    </div>
+                                    <div class="details-user">
+                                        <p class ="long_user">nom et prenom</p>
+                                        <p class ="long_universite">Universite</p>
+                                    </div>
+                                </div>
+                                <div class="categories-odd">
+                                    Categorie du projet
+                                </div>
+                            </div>
+                            <div class="number-collect">
+                                <div class="number-jeuton">
+                                    <p class="total-number">100</p>
+                                    <p class="total">sur 15800</p>
+                                </div>
+                            <div class="number-valifunders">
+                                <p class="total-valifunders">15</p>
+                                <p class="valifunders">Valifunders</p>
+                            </div>
+                            </div>
+                            <div class="progress w3-progress-width">
+                                <div class="progress-bar role-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                            </div>
+                                <div class="number-collect collect-top">
+                                <div class="number-jeuton">
+                                    <p class="total-number">15%</p>
+                                </div>
+                                <div class="number-valifunders days">
+                                    <p class="valifunders valifunders-days">J - 15</p>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p class="_wrapper">
+                                  23.5em;height: 11px;border-radius: .number-collect{width: 22em;display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 0.5em 0.5em 0.2em 0.5em;font-size: 13px;transform: translate(5px,0);
+                                </p>
+                            </div>
+                            <div class="button-details">
+                            <%= link_to "Details", projects_path(id: i), class:'details' %>
+                                <div class="suivre hearth_id">
+                                    <div><i class="fa _heart louange" id ="" real = ""></i></div>
+                                    <div class="_t"><span class =""> 12 </span><span class = "">suivre</span></div>
+                                </div>
+                            </div>
+                          </div>
+
+                        <% end %>
+
+                        <br>
+                    </div>
+                </div>
+                <div class="arrow-r right-r"><i class="fa fa-arrow-right arow-hover" id = "slideToggleRigth"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="tous-ac" >
+        <a class="show-all" href ="#">
+             Voir tous les projets
+        </a>
+    </div>
+    <div class ="_bon01">
+        <div class ="_bon_padding">
+        <div class ="_bon_project">
+
+          <% for item in 1..15 %>
+            <div class ="_001">
+                <div class="font-1">
+                    <div class="item-plan">
+                        <div class="img-plan">
+                            <%= image_tag 'test.jpg', class:'img-plan' %>
+                            <div class="cat pointer">
+                                categorie de l'evenement eternelle
+                            </div>
+                        </div>
+                        <div class="titre-plan">Element style document style</div>
+                        <div class="l-day">
+                            <div class="d"> date</div>
+                                <div class="l tex-specials">lieu</div>
+                            </div>
+                        <a class="btn detailsPlan" href = "#">
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+          <% end %>
+
+
+        </div>
+        </div>
+    </div>
+  <br>
+    <div class="tous-ac">
+        <a class="show-all" href ="#">
+            Voir plus de bons plans
+        </a>
+    </div>
+<div id="not_connected" class="modal fade" role="dialog">
+    @include('components.create_modal_not_connected')
+</div>
+
+
+
+<div id="user_nav">
+    <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. This cannot be cheese?
+        <%= link_to 'Sign out', destroy_user_session_path %>
+    <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+</div>
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+    <div class="field">
+
+  </div>
+
+  <section class="our-webcoderskull padding-lg">
+  <div class="container">
+    <div class="row heading heading-icon">
+        <h2>Our Team</h2>
+    </div>
+    <ul class="row">
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Web coder skull</a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="http://www.webcoderskull.com/img/team1.png" class="img-responsive" alt=""></figure>
+            <h3><a href="#">Kappua </a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Manish </a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+       </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="http://www.webcoderskull.com/img/team2.png" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Atul </a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+    </ul>
+  </div>
+</section>

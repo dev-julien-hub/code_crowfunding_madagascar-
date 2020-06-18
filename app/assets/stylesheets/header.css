@@ -1,0 +1,49 @@
+nav{
+	font-size:15px;
+}
+#nav-top{
+	position:fixed;
+	width: 100%;
+  z-index: 1202;
+  height: 4em;
+}
+.under{padding-bottom: 3em;}
+.p0{
+    padding: 3px 2em 3px 2em;
+    text-align: center;
+}
+.c0{
+    color:black;
+}
+.c0:hover{
+    color:brown;
+}
+.pos_badge{
+    content: '';
+    transform: translate(-15px, -15px);
+}
+.drop{
+  right: 2px;
+  position:absolute;
+  z-index:8;
+  box-shadow: 0.05px 0.05px 0.1px 0.05px black;
+}
+.profile-image{
+  border-radius: 50%;
+  margin: 0 1px 0 13px;
+  height: 25px;
+  width: 28px;
+}
+._trans-late{
+transform: translate(0,7px);
+}
+.link-color{
+	color: #a9903c !important;
+    text-decoration: none !important;
+}
+.nav-translate{
+	transform: translate(-65px, -5px);
+}
+._n01{
+	margin-right:4px;
+}

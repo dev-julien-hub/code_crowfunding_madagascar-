@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Valintanana</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+  <script type="text/javascript" src ='js/popper.min.js'></script>
+  <script type="text/javascript" src ='js/bootstrap.min.js'></script>
+  <script type="text/javascript" src ='js/bootstrap.js'></script>
+
+    <%= render 'layouts/top_nav_bar' %>
+    <div class="notice-mes-val">
+      <p class="notice"><%= notice %></p>
+    </div>
+    <div class="alert-mes-val">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <div class="main">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
